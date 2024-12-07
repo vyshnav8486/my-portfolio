@@ -1,0 +1,170 @@
+body {
+  background-color: #e7f2f8; /* Dark background */
+  color:#313E61;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  display: block;
+  height: 100vh;
+  position: relative;
+  padding-top: 50px; /* Adjust this based on the height of your navbar */
+}
+
+/* Content Styling */
+.content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%; /* Keep the top margin */
+  position: relative;
+  align-items: flex-start;
+  margin-left: 6rem; /* 6rem space from the left */
+}
+
+
+h1, h3 {
+  font-size: 2rem; /* Same font size for both */
+  margin: 0.3rem;
+  font-weight: 500;
+  font-family:'parkinsans';
+
+}
+h2{
+  font-family:'parkinsans';
+  font-size: 3rem; /* Same font size for both */
+  font-weight: 500; 
+  margin: 0.3rem;
+}
+.blue-text {
+  color: rgb(86, 86, 243);
+}
+
+.social-links {
+  margin: 0.5rem 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #313E61;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00bcd4; /* Hover effect color */
+}
+
+.download-btn {
+  margin-top: 2rem;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  background-color: #00bcd4;
+  color: #313E61;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #0199b1;
+  transform: scale(1.05); /* Slight grow effect */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between nav and portfolio name */
+  padding: 1px 2px; /* Padding for spacing */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none; /* Remove bullet points */
+  margin-right: 6rem;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 1.5rem; /* Space between links */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #313E61;
+  font-size: 1rem;
+  font-family: Verdana, sans-serif; /* Sans-serif font for navigation */
+  transition: color 0.4s ease;
+}
+
+#PORTFOLIO {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #313E61;
+  margin-left: 6rem;
+  font-family: 'Dancing Script', cursive; /* Stylish italic font */
+}
+
+header nav ul li a:hover {
+  color: #7570bf; /* Cyan hover effect */
+}
+.profile-image {
+  width: 250px;        /* Set width for the image */
+  height: 250px;       /* Set height for the image (oval shape) */
+  border-radius: 50%;  /* Create an oval shape */
+  object-fit: cover;   /* Ensure the image fills the space without distortion */
+  position: absolute;  /* Position the image absolutely within the container */
+  top: 50%;            /* Position the image vertically at the center */
+  right:20%;         /* 10px from the right */
+  transform: translateY(-50%); /* Center the image vertically */
+}
+  
+  /* For devices less than 768px width */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 3rem; /* Reduced margin for smaller screens */
+    text-align: center; /* Center text on smaller screens */
+    margin-top: 10%; /* Adjust margin for smaller screens */
+  }
+
+  .profile-image {
+    width: 150px;    /* Reduce the size of the image */
+    height: 150px;   /* Make the image height equal to width for circular shape */
+    right: 5px;      /* Adjust right position */
+    top: 25%;        /* Adjust top position */
+  }
+}
+
+/* For very small devices less than 480px width */
+@media (max-width: 480px) {
+  .content {
+    margin-left: 1rem; /* Further reduce margin for very small screens */
+    margin-top: 5%;    /* Adjust margin */
+  }
+
+  .profile-image {
+    width: 120px;    /* Make the image smaller */
+    height: 120px;   /* Maintain circular shape */
+    right: 5px;      /* Adjust right position */
+    top: 20%;        /* Keep the image centered */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;  /* Reduce font size for smaller screens */
+  }
+
+  .social-links a {
+    font-size: 1rem; /* Reduce font size for social links */
+  }
+
+  .download-btn {
+    font-size: 0.9rem; /* Make the button text smaller */
+    padding: 0.6rem 1.5rem; /* Adjust button padding */
+  }
+}
