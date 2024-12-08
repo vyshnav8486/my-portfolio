@@ -232,3 +232,39 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
   transition: all 0.3s ease; /* Smooth transition */
 }
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust animations for content */
+  .content {
+    animation: slideIn 1s ease-in-out; /* Keep the slide-in animation */
+    animation-delay: 0.1s;            /* Reduce delay for quicker loading */
+    animation-fill-mode: both;
+  }
+
+  /* Adjust animations for social links */
+  .social-links a {
+    animation: slideIn 0.8s ease-in-out; /* Faster animation for smaller screens */
+    animation-delay: 0.1s;              /* Reduced delay */
+    animation-fill-mode: forwards;
+  }
+
+  /* Adjust animations for the button */
+  .download-btn {
+    animation: slideIn 1s ease-in-out;
+    animation-delay: 0.2s; /* Slightly delayed for emphasis */
+    animation-fill-mode: forwards;
+  }
+
+  /* Adjust hover effects for social links */
+  .social-links a:hover {
+    transform: scale(1.05);  /* Slightly smaller scale effect */
+    color: #007a91;          /* Slightly darker highlight color */
+  }
+
+  /* Adjust hover effects for the button */
+  .download-btn:hover {
+    background-color: #016a81; /* Darker shade for hover */
+    transform: scale(1.02);    /* Reduced scale effect for smaller screens */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  }
+}
