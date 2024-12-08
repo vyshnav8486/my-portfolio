@@ -195,54 +195,55 @@ header nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* Navbar Adjustments for Small Phones */
-  header {
-    padding: 10px;
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Show the hamburger icon on mobile */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
 
-  #PORTFOLIO {
-    font-size: 1.2rem;
+  /* Initially hide the menu on mobile */
+  .nav-links {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
   }
 
-  nav ul {
-    padding: 10px;
-    gap: 5px;
+  .nav-links li {
+    margin-bottom: 1.5rem;
   }
 
-  nav ul li a {
-    font-size: 0.9rem;
+  /* Change the navbar items color on hover */
+  .nav-links li a:hover {
+    color: #07d0e6;
   }
 
-  /* Main Content */
-  .content {
-    margin-left: 1rem;
-    margin-top: 20%;
-  }
-
-  h1, h3 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  /* Social Links */
-  .social-links {
-    gap: 5px;
-  }
-
-  /* Download Button */
-  .download-btn {
-    padding: 10px;
-    font-size: 1rem;
+  /* When the menu is toggled */
+  .nav-links.active {
+    display: flex;
   }
 }
+
 
 /* Animations */
 @keyframes slideIn {
@@ -295,3 +296,4 @@ nav ul li:nth-child(4) a {
 nav ul li:nth-child(5) a {
   animation-delay: 0.6s; /* Contact */
 }
+ 
