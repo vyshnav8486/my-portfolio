@@ -133,38 +133,81 @@ header nav ul li a:hover {
 
 /* Media Queries */
 /* Media query for phone screens */
-@media (max-width: 768px) {
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Navbar Adjustments */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+
+  /* Main Content */
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
   .content {
-    animation: slideIn 1s ease-in-out; /* 1-second animation */
-    animation-delay: 0.3s;            /* Starts after 0.3s */
-    animation-fill-mode: both;        /* Keep final state */
+    padding: 15px;
   }
 
-  .social-links a {
-    opacity: 0; /* Invisible initially */
-    animation: slideIn 1s ease-in-out;
-    animation-delay: 0.5s; /* Delay for 0.5s */
-    animation-fill-mode: forwards; /* Keeps the final state */
+  /* Social Links */
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
   }
 
+  /* Button */
   .download-btn {
-    opacity: 0; /* Invisible initially */
-    animation: slideIn 1.2s ease-in-out;
-    animation-delay: 0.5s; /* Delay for 0.5s */
-    animation-fill-mode: forwards; /* Keeps the final state */
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Navbar Adjustments for Small Phones */
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  /* Adjust hover effects for smaller screens */
-  .social-links a:hover {
-    transform: scale(1.05); /* Smaller scale effect */
+  .navbar li {
+    margin: 5px 0;
   }
 
-  .download-btn:hover {
-    transform: scale(1.02); /* Reduced scale effect for smaller screens */
-    background-color: #016a81; /* Consistent hover background */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  /* Main Content */
+  h1 {
+    font-size: 1.5rem;
   }
 
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* Social Links */
+  .social-links {
+    flex-direction: column;
+  }
+
+  /* Button */
+  .download-btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
   #PORTFOLIO {
     font-size: 1.2rem;
     margin-left: 4rem;
