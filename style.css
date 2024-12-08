@@ -237,21 +237,21 @@ body {
   /* Adjust animations for content */
   .content {
     animation: slideIn 1s ease-in-out; /* Keep the slide-in animation */
-    animation-delay: 0.1s;            /* Reduce delay for quicker loading */
+    animation-delay: 0.3s;            /* Reduce delay for quicker loading */
     animation-fill-mode: both;
   }
 
   /* Adjust animations for social links */
   .social-links a {
     animation: slideIn 0.8s ease-in-out; /* Faster animation for smaller screens */
-    animation-delay: 0.1s;              /* Reduced delay */
+    animation-delay: 0.3s;              /* Reduced delay */
     animation-fill-mode: forwards;
   }
 
   /* Adjust animations for the button */
   .download-btn {
     animation: slideIn 1s ease-in-out;
-    animation-delay: 0.2s; /* Slightly delayed for emphasis */
+    animation-delay: 0.3s; /* Slightly delayed for emphasis */
     animation-fill-mode: forwards;
   }
 
