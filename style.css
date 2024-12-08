@@ -198,7 +198,7 @@ body {
 /* Apply animation to the content */
 .content {
   animation: slideIn 1s ease-in-out; /* 1-second animation */
-  animation-delay: 0.2s;            /* Starts after 0.5s */
+  animation-delay: 0.3s;            /* Starts after 0.5s */
   animation-fill-mode: both;        /* Keep final state */
 }
 
@@ -206,7 +206,7 @@ body {
 .social-links a {
   opacity: 0; /* Invisible initially */
   animation: slideIn 1s ease-in-out;
-  animation-delay: 0.2s; /* Delay for 1s */
+  animation-delay: 0.3s; /* Delay for 1s */
   animation-fill-mode: forwards; /* Keeps the final state */
 }
 
@@ -214,7 +214,7 @@ body {
 .download-btn {
   opacity: 0; /* Invisible initially */
   animation: slideIn 1.2s ease-in-out;
-  animation-delay: 0.2s; /* Starts after 1.5s */
+  animation-delay: 0.3s; /* Starts after 1.5s */
   animation-fill-mode: forwards; /* Keeps the final state */
 }
 
