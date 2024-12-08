@@ -1,333 +1,104 @@
-/* Base Styles */
+/* Basic body styling */
 body {
-  background-color: #030212;
-  color: #eceff6;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  display: block;
-  position: relative;
-  padding-top: 50px;
+  background-color: rgb(1, 1, 24); /* Navy blue background */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
-.content {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  margin-top: 10%;
-  align-items: flex-start;
-  margin-left: 6rem;
-}
-
-h1, h2, h3 {
-  font-family: 'parkinsans';
-  margin: 0.3rem;
-  font-weight: 500;
-}
-
-h1, h3 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-.blue-text {
-  color: rgb(86, 86, 243);
-}
-
-/* Social Links */
-.social-links {
-  margin: 1rem 0;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.social-links a {
-  text-decoration: none;
-  color: #f2f2f5;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
-}
-
-.social-links a i {
-  margin-right: 0.5rem;
-}
-
-.social-links a:hover {
-  color: #07d0e6;
-}
-
-/* Description */
-.description {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #eff1f7;
-  line-height: 1.6;
-  max-width: 60%;
-  word-wrap: break-word;
-}
-
-/* Download Button */
-.download-btn {
-  margin-top: 2rem;
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  background-color: #047685;
-  color: #f7f7f7;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 25px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.download-btn:hover {
-  background-color: #06434d;
-  transform: scale(1.05);
-}
-
-/* Header */
+/* Header styling */
 header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1px 2px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
+  justify-content: space-between; /* Space between portfolio name and navigation links */
+  padding: 1rem 4rem; /* 4rem space on left and right */
+  color: white; /* White text color */
+  align-items: center; /* Vertically center content */
+  position: fixed; /* Fixed position at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Align to the top */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
+/* Portfolio name styling */
+.portfolio-name {
+  font-size: 2.5rem; /* Large font size for the name */
+  font-weight: 500; /* Medium font weight */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font family */
+  opacity: 0; /* Initially hide the portfolio name */
+  animation: fadeIn 2s forwards; /* Apply fade-in animation */
+  animation-delay: 0.5s; /* Delay the fade-in */
+}
+
+/* Fade-in animation for portfolio name */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+/* Navigation styling */
 nav ul {
   display: flex;
-  list-style: none;
-  margin-right: 6rem;
+  list-style-type: none; /* Remove bullet points */
   padding: 0;
+  margin-right: 6rem; /* Add margin to the right */
 }
 
 nav ul li {
-  margin-right: 1.5rem;
+  margin-left: 2rem; /* Space between navigation links */
+  opacity: 0; /* Hide the links initially */
+  animation: appear 1s forwards; /* Apply animation to links */
 }
 
+/* Navigation link styling */
 nav ul li a {
-  text-decoration: none;
-  color: #f4f5f8;
-  font-size: 1rem;
-  transition: color 0.4s ease;
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text color */
+  font-size: 1rem; /* Font size for the links */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font family */
+  position: relative; /* Positioning for the hover effect */
+  display: inline-block; /* Allow for hover effect */
+  padding: 0.5rem; /* Padding around the link */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 3rem; /* Rounded corners */
 }
 
-#PORTFOLIO {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f4f4f7;
-  margin-left: 6rem;
-  font-family: 'Dancing Script', cursive;
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  transform: scale(1.1); /* Slightly scale up the link */
+  background-color: rgb(1, 1, 24); /* Background color (same as body background) */
+  color: #ffffff; /* Change text color to white */
 }
 
-header nav ul li a:hover {
-  color: #424235ed;
+/* Delayed animations for individual links */
+nav ul li:nth-child(1) {
+  animation-delay: 0.2s; /* Delay for the first link */
+}
+nav ul li:nth-child(2) {
+  animation-delay: 0.4s; /* Delay for the second link */
+}
+nav ul li:nth-child(3) {
+  animation-delay: 0.6s; /* Delay for the third link */
+}
+nav ul li:nth-child(4) {
+  animation-delay: 0.8s; /* Delay for the fourth link */
+}
+nav ul li:nth-child(5) {
+  animation-delay: 1s; /* Delay for the fifth link */
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-  /* Navbar Adjustments */
-  header {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  #PORTFOLIO {
-    margin-left: 0;
-    font-size: 1.8rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  /* Main Content */
-  .content {
-    margin-left: 2rem;
-    margin-top: 15%;
-  }
-
-  h1, h3 {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .description {
-    max-width: 100%;
-    font-size: 0.9rem;
-  }
-
-  /* Social Links */
-  .social-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Download Button */
-  .download-btn {
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.2rem;
-  }
-}
-
-/* Hamburger button */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-
-/* Show the hamburger icon on mobile */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  /* Initially hide the menu on mobile */
-  .nav-links {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-  }
-
-  .nav-links li {
-    margin-bottom: 1.5rem;
-  }
-
-  /* Change the navbar items color on hover */
-  .nav-links li a:hover {
-    color: #07d0e6;
-  }
-
-  /* When the menu is toggled */
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-
-/* Animations */
-@keyframes slideIn {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.content {
-<<<<<<< HEAD
-  animation: slideIn 1.5s ease-in-out 0.2s both;
-=======
-  animation: slideIn 1s ease-in-out; /* 1-second animation */
-  animation-delay: 0.3s;            /* Starts after 0.3s */
-  animation-fill-mode: both;        /* Keep final state */
->>>>>>> e9977fe8f815f1a87b3d0ce793cf80b2217c2d3c
-}
-
-/* Entry animation for social links */
-.social-links a {
-  opacity: 0; /* Invisible initially */
-  animation: slideIn 1s ease-in-out; /* 1-second animation */
-  animation-delay: 0.3s;             /* Delay for 0.3s */
-  animation-fill-mode: forwards;    /* Keeps the final state */
-}
-
-/* Entry animation for the button */
-.download-btn {
-  opacity: 0; /* Invisible initially */
-  animation: slideIn 1.2s ease-in-out; /* 1.2-second animation */
-  animation-delay: 0.3s;              /* Starts after 0.3s */
-  animation-fill-mode: forwards;      /* Keeps the final state */
-}
-
-/* Hover effect for social links */
-.social-links a:hover {
-  color: #00bcd4;         /* Highlight color */
-  transform: scale(1.1);  /* Slightly grow */
-  transition: transform 0.3s, color 0.3s;
-}
-
-@keyframes navSlideIn {
+/* Animation for making the links appear with a smooth transition */
+@keyframes appear {
   from {
-    transform: translateY(-50px);
     opacity: 0;
+    transform: translateY(10px); /* Links start from slightly below */
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0); /* Links move to their final position */
   }
 }
-nav ul li a {
-  animation: navSlideIn 1.5s ease-in-out;
-  animation-fill-mode: both;
-  opacity: 0; /* Initially invisible */
-}
-<<<<<<< HEAD
-nav ul li:nth-child(1) a {
-  animation-delay: 0.2s; /* Home */
-}
-nav ul li:nth-child(2) a {
-  animation-delay: 0.3s; /* About */
-}
-nav ul li:nth-child(3) a {
-  animation-delay: 0.4s; /* Services */
-}
-nav ul li:nth-child(4) a {
-  animation-delay: 0.5s; /* Contact */
-}
-nav ul li:nth-child(5) a {
-  animation-delay: 0.6s; /* Contact */
-}
- 
-=======
-/* Adjust hover effects for the button */
-.download-btn:hover {
-  background-color: #016a81; /* Darker shade for hover */
-  transform: scale(1.02);    /* Reduced scale effect for smaller screens */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
-}
-
->>>>>>> e9977fe8f815f1a87b3d0ce793cf80b2217c2d3c
