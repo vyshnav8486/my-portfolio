@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth', // Smooth scroll to the top
     });
   });
-  function toggleMenu() {
-    const menu = document.querySelector('.nav-links');
-    menu.classList.toggle('active');
-  }
-      
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+  
