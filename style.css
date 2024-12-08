@@ -258,12 +258,36 @@ header nav ul li a:hover {
 }
 
 .content {
+<<<<<<< HEAD
   animation: slideIn 1.5s ease-in-out 0.2s both;
+=======
+  animation: slideIn 1s ease-in-out; /* 1-second animation */
+  animation-delay: 0.3s;            /* Starts after 0.3s */
+  animation-fill-mode: both;        /* Keep final state */
+>>>>>>> e9977fe8f815f1a87b3d0ce793cf80b2217c2d3c
 }
 
-.social-links a,
+/* Entry animation for social links */
+.social-links a {
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1s ease-in-out; /* 1-second animation */
+  animation-delay: 0.3s;             /* Delay for 0.3s */
+  animation-fill-mode: forwards;    /* Keeps the final state */
+}
+
+/* Entry animation for the button */
 .download-btn {
-  animation: slideIn 1.2s ease-in-out 0.2s both;
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1.2s ease-in-out; /* 1.2-second animation */
+  animation-delay: 0.3s;              /* Starts after 0.3s */
+  animation-fill-mode: forwards;      /* Keeps the final state */
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+  color: #00bcd4;         /* Highlight color */
+  transform: scale(1.1);  /* Slightly grow */
+  transition: transform 0.3s, color 0.3s;
 }
 
 @keyframes navSlideIn {
@@ -281,6 +305,7 @@ nav ul li a {
   animation-fill-mode: both;
   opacity: 0; /* Initially invisible */
 }
+<<<<<<< HEAD
 nav ul li:nth-child(1) a {
   animation-delay: 0.2s; /* Home */
 }
@@ -297,3 +322,12 @@ nav ul li:nth-child(5) a {
   animation-delay: 0.6s; /* Contact */
 }
  
+=======
+/* Adjust hover effects for the button */
+.download-btn:hover {
+  background-color: #016a81; /* Darker shade for hover */
+  transform: scale(1.02);    /* Reduced scale effect for smaller screens */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+>>>>>>> e9977fe8f815f1a87b3d0ce793cf80b2217c2d3c
