@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  background-color: #030212; 
+  background-color: #030212;
   color: #eceff6;
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -132,35 +132,52 @@ header nav ul li a:hover {
 }
 
 /* Media Queries */
-/* Media query for phone screens */
-/* Media Queries */
 @media screen and (max-width: 768px) {
   /* Navbar Adjustments */
-  .navbar {
+  header {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 10px 20px;
   }
 
-  .navbar ul {
+  #PORTFOLIO {
+    margin-left: 0;
+    font-size: 1.8rem;
+  }
+
+  nav ul {
     flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
     width: 100%;
   }
 
-  .navbar li {
-    margin: 10px 0;
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    width: 100%;
   }
 
   /* Main Content */
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
   .content {
-    padding: 15px;
+    margin-left: 2rem;
+    margin-top: 15%;
+  }
+
+  h1, h3 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 0.9rem;
   }
 
   /* Social Links */
@@ -169,7 +186,7 @@ header nav ul li a:hover {
     gap: 10px;
   }
 
-  /* Button */
+  /* Download Button */
   .download-btn {
     width: 100%;
     text-align: center;
@@ -180,37 +197,50 @@ header nav ul li a:hover {
 
 @media screen and (max-width: 480px) {
   /* Navbar Adjustments for Small Phones */
-  .navbar ul {
-    flex-direction: column;
-    align-items: flex-start;
+  header {
+    padding: 10px;
   }
 
-  .navbar li {
-    margin: 5px 0;
+  #PORTFOLIO {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
   }
 
   /* Main Content */
-  h1 {
-    font-size: 1.5rem;
+  .content {
+    margin-left: 1rem;
+    margin-top: 20%;
   }
 
-  p {
-    font-size: 0.9rem;
+  h1, h3 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
   }
 
   /* Social Links */
   .social-links {
-    flex-direction: column;
+    gap: 5px;
   }
 
-  /* Button */
+  /* Download Button */
   .download-btn {
-    font-size: 1rem;
     padding: 10px;
-  }
-  #PORTFOLIO {
-    font-size: 1.2rem;
-    margin-left: 4rem;
+    font-size: 1rem;
   }
 }
 
