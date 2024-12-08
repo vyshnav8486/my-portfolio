@@ -22,7 +22,7 @@ body {
 
 
 h1, h3 {
-  font-size: 2rem; /* Same font size for both */
+  font-size: 1.5rem; /* Same font size for both */
   margin: 0.3rem;
   font-weight: 500;
   font-family:'parkinsans';
@@ -30,7 +30,7 @@ h1, h3 {
 }
 h2{
   font-family:'parkinsans';
-  font-size: 3rem; /* Same font size for both */
+  font-size: 2rem; /* Same font size for both */
   font-weight: 500; 
   margin: 0.3rem;
 }
@@ -131,16 +131,6 @@ nav ul li a {
 header nav ul li a:hover {
   color: #424235ed; /* Cyan hover effect */
 }
-.profile-image {
-  width: 250px;        /* Set width for the image */
-  height: 250px;       /* Set height for the image (oval shape) */
-  border-radius: 50%;  /* Create an oval shape */
-  object-fit: cover;   /* Ensure the image fills the space without distortion */
-  position: absolute;  /* Position the image absolutely within the container */
-  top: 50%;            /* Position the image vertically at the center */
-  right:20%;         /* 10px from the right */
-  transform: translateY(-50%); /* Center the image vertically */
-}
   
   /* For devices less than 768px width */
 @media (max-width: 768px) {
@@ -151,23 +141,13 @@ header nav ul li a:hover {
   }
 
   /* For devices less than 768px width */
-  .profile-image {
-    width: 250px; /* Keep the same size for tablets or medium screens */
-    height: 250px;
-    right: 10%;
-  }}
+ }
 
 /* For very small devices less than 480px width */
 @media (max-width: 480px) {
   .content {
     margin-left: 1rem;
     margin-top: 5%;
-  }
-
-  .profile-image {
-    width: 250px; /* Keep the same size for phones */
-    height: 250px;
-    right: 10%; /* Adjust position if needed */
   }
 
   h1, h2, h3 {
@@ -184,3 +164,71 @@ header nav ul li a:hover {
   }
 }
 /* For smaller screens */
+/* Devices below 768px */
+@media (max-width: 768px) {
+  body {
+    background-color: #032e45;
+  }
+}
+
+/* Devices below 480px */
+@media (max-width: 480px) {
+  body {
+    background-color: #032638;
+  }
+}
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Standard */
+}
+/* Entry animation for content */
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px); /* Start below */
+    opacity: 0;                 /* Invisible */
+  }
+  100% {
+    transform: translateY(0);   /* End at original position */
+    opacity: 1;                 /* Fully visible */
+  }
+}
+
+/* Apply animation to the content */
+.content {
+  animation: slideIn 1s ease-in-out; /* 1-second animation */
+  animation-delay: 0.2s;            /* Starts after 0.5s */
+  animation-fill-mode: both;        /* Keep final state */
+}
+
+/* Entry animation for social links */
+.social-links a {
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1s ease-in-out;
+  animation-delay: 0.2s; /* Delay for 1s */
+  animation-fill-mode: forwards; /* Keeps the final state */
+}
+
+/* Entry animation for the button */
+.download-btn {
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1.2s ease-in-out;
+  animation-delay: 0.2s; /* Starts after 1.5s */
+  animation-fill-mode: forwards; /* Keeps the final state */
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+  color: #00bcd4;         /* Highlight color */
+  transform: scale(1.1);  /* Slightly grow */
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect for button */
+.download-btn:hover {
+  background-color: #0199b1; /* Darker shade */
+  transform: scale(1.05);    /* Grow slightly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
