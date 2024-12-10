@@ -175,12 +175,32 @@ header nav ul li a:hover {
 }
 
 .content {
-  animation: slideIn 1s ease-in-out 0.2s both;
+  animation: slideIn 1s ease-in-out; /* 1-second animation */
+  animation-delay: 0.3s;            /* Starts after 0.3s */
+  animation-fill-mode: both;        /* Keep final state */
 }
 
-.social-links a,
+/* Entry animation for social links */
+.social-links a {
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1s ease-in-out; /* 1-second animation */
+  animation-delay: 0.3s;             /* Delay for 0.3s */
+  animation-fill-mode: forwards;    /* Keeps the final state */
+}
+
+/* Entry animation for the button */
 .download-btn {
-  animation: slideIn 1.2s ease-in-out 0.2s both;
+  opacity: 0; /* Invisible initially */
+  animation: slideIn 1.2s ease-in-out; /* 1.2-second animation */
+  animation-delay: 0.3s;              /* Starts after 0.3s */
+  animation-fill-mode: forwards;      /* Keeps the final state */
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+  color: #00bcd4;         /* Highlight color */
+  transform: scale(1.1);  /* Slightly grow */
+  transition: transform 0.3s, color 0.3s;
 }
 
 @keyframes navSlideIn {
@@ -196,5 +216,11 @@ header nav ul li a:hover {
 
 nav ul li a {
   animation: navSlideIn 0.5s ease-in-out both;
+}
+/* Adjust hover effects for the button */
+.download-btn:hover {
+  background-color: #016a81; /* Darker shade for hover */
+  transform: scale(1.02);    /* Reduced scale effect for smaller screens */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
 }
 
