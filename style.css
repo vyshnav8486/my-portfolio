@@ -1,6 +1,6 @@
 /* Basic body styling */
 body {
-  background-color: rgb(1, 1, 24); /* Navy blue background */
+  background-color: rgb(2, 2, 42); /* Navy blue background */
   height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margin */
 }
@@ -70,7 +70,7 @@ nav ul li a {
 /* Hover effect for navigation links */
 nav ul li a:hover {
   transform: scale(1.1); /* Slightly scale up the link */
-  background-color: rgb(1, 1, 24); /* Background color (same as body background) */
+  background-color: rgb(2, 2, 42); /* Background color (same as body background) */
   color: #ffffff; /* Change text color to white */
 }
 
