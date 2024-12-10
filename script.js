@@ -1,12 +1,10 @@
-const hamburger = document.querySelector('.hamburger-menu');
-const navMenu = document.querySelector('nav ul');
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const navMenu = document.querySelector("nav ul");
 
-hamburger.addEventListener('click', () => {
-  if (navMenu.classList.contains('hidden')) {
-    navMenu.classList.remove('hidden');
-    navMenu.classList.add('visible');
-  } else {
-    navMenu.classList.add('hidden');
-    navMenu.classList.remove('visible');
-  }
+  // Toggle the menu visibility when the hamburger is clicked
+  hamburgerMenu.addEventListener("click", function () {
+    navMenu.classList.toggle("hidden");
+    navMenu.classList.toggle("visible");
+  });
 });

@@ -139,6 +139,7 @@ nav ul li:nth-child(5) {
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
+    margin-right:0;
   }
 
 
