@@ -104,9 +104,9 @@ nav ul li:nth-child(5) {
 }
 @media (max-width: 768px) {
   .portfolio-name {
-    font-size: 1.5rem; /* Reduce font size on smaller screens */
+    font-size: 1.8rem; /* Reduce font size on smaller screens */
     font-weight: 100;
     font-family:"Dancing Script", cursive;
-    font-style: italic;
+    font-style:normal;
     align-items:flex-start;
   }}
