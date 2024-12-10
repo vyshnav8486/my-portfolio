@@ -109,3 +109,73 @@ nav ul li:nth-child(5) {
     font-family: "Courgette", cursive;
     font-style:normal;
     }}
+    /* Hamburger menu styling */
+/* Hamburger menu styling */
+.hamburger-menu {
+  display: none; /* Hidden by default on large screens */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 50px; /* Width of the hamburger menu */
+  height: 25px; /* Height of the hamburger menu */
+  position: absolute; /* Allows positioning in the top-right */
+  top: 30%; /* Distance from the top */
+  right: 100px; /* Distance from the right */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 20%; /* Height of each line in the hamburger menu */
+  width: 50%; /* Make lines span the full width */
+  background-color: white; /* Color of the hamburger lines */
+  border-radius: 20px; /* Rounded corners for lines */
+  transition: all 0.3s ease; /* Smooth transition for animations */
+}
+/* Navigation menu hidden by default on small screens */
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+
+  nav ul {
+    flex-direction: column;
+    margin-right:4.5rem;
+    font-size: 10px; /* Set font size for navigation items */
+  }
+
+  nav ul li {
+    margin: 0; /* Remove additional margin */
+    padding: 0.3rem 0; /* Adjust padding to control spacing */
+  }
+/* Navigation menu hidden by default on small screens */
+nav ul {
+  display: none; /* Ensure the menu is hidden initially */
+  flex-direction: column; /* Stack links vertically when visible */
+  position: absolute; /* Position the menu */
+  background-color: rgb(2, 2, 59); /* Navy blue background */
+  right: 0; /* Align menu to the right */
+  top: 10%; /* Position menu below the hamburger menu */
+  padding: 2rem;
+  font-size: 10px; /* Ensure all nav items use the small font size */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font family */
+  border-radius: 0.5rem; /* Rounded corners for the menu */
+  z-index: 999; /* Ensure it stays on top */
+}
+
+nav ul li a {
+  font-size: 10px; /* Apply font size directly to links */
+  }
+/* Show menu when the hidden class is removed */
+nav ul.hidden {
+  display: none; /* Keep hidden when the 'hidden' class is active */
+}
+
+nav ul.visible {
+  display: flex; /* Make menu visible when toggled */
+}
+}
