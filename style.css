@@ -23,7 +23,7 @@ header {
   font-size: 2.5rem; /* Large font size for the name */
   font-weight: 500; /* Medium font weight */
   font-family:"Dancing Script", cursive;
-  font-style: italic;  opacity: 0; /* Initially hide the portfolio name */
+  opacity: 0; /* Initially hide the portfolio name */
   animation: fadeIn 2s forwards; /* Apply fade-in animation */
   animation-delay: 0.5s; /* Delay the fade-in */
 }
@@ -108,5 +108,4 @@ nav ul li:nth-child(5) {
     font-weight: 100;
     font-family:"Dancing Script", cursive;
     font-style:normal;
-    align-items:flex-start;
-  }}
+    }}
