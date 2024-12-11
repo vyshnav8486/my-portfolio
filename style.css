@@ -190,7 +190,7 @@ nav ul.visible {
   font-family: 'parkinsans',cursive;
   position: absolute; /* Enables precise positioning */
   left: 20px; /* Keeps it close to the left side with a 20px margin */
-  top: 30%; /* Centers the div vertically */
+  top: 20%; /* Centers the div vertically */
   transform: translateY(-50%); /* Adjusts the vertical position to ensure true centering */
   text-align: left; /* Ensures the text aligns to the left */
   margin-left: 1rem;
@@ -235,7 +235,7 @@ nav ul.visible {
 @media (max-width: 768px) {
   .headings {
     margin-left: 1rem; /* Reduce margin for smaller screens */
-    top: 25%; /* Centers the div vertically */
+    top:15%; /* Centers the div vertically */
     
   }
 
@@ -258,7 +258,7 @@ nav ul.visible {
   font-size: 15px; /* Font size for better readability */
   color: #faf4f4; /* Text color */
   position: absolute; /* Enables precise positioning */
-  top:52%; /* Centers the div vertically */
+  top:40%; /* Centers the div vertically */
   animation: fadeIn 2.5s ease-in-out forwards; /* Fade-in effect with delay */
   text-align: left; /* Ensures the text aligns to the left */
   margin-left: 1rem;
@@ -286,7 +286,7 @@ nav ul.visible {
     font-size: 15px; /* Smaller font size */
     max-width: 500px; /* Limit the paragraph width */
     left: 10px; /* Reduce left margin */
-    top:43%; /* Adjust vertical position */
+    top:30%; /* Adjust vertical position */
     margin-left: 1.5rem;
     font-weight: 300;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
