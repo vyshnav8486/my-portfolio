@@ -283,8 +283,8 @@ nav ul.visible {
 @media (max-width: 768px) {
   .description {
     display: inline-block; /* Align next to the previous paragraph */
-    font-size: 15px; /* Smaller font size */
-    max-width: 500px; /* Limit the paragraph width */
+    font-size: 10px; /* Smaller font size */
+    max-width: 250px; /* Limit the paragraph width */
     left: 10px; /* Reduce left margin */
     top:30%; /* Adjust vertical position */
     margin-left: 1.5rem;
