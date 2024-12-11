@@ -1,6 +1,6 @@
 /* Basic body styling */
 body {
-  background-color: rgb(6, 6, 47); /* Navy blue background */
+  background-color: rgb(4, 4, 32); /* Navy blue background */
   height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margin */
 }
@@ -145,8 +145,8 @@ nav ul li:nth-child(5) {
   nav ul li a:hover {
     transform: scale(1.2); /* Slightly scale up the link */
     border-radius: 3rem; /* Rounded corners */
-    background-color: rgb(30, 30, 76); /* Navy blue background */
-    }
+    background-color: rgb(6, 6, 47); /* Navy blue background */
+  }
   nav ul {
     flex-direction: column;
     margin-right:2.5rem;
@@ -184,4 +184,111 @@ nav ul.hidden {
 nav ul.visible {
   display: flex; /* Make menu visible when toggled */
 }
+}
+.headings {
+  color: aliceblue;
+  font-family: 'parkinsans',cursive;
+  position: absolute; /* Enables precise positioning */
+  left: 20px; /* Keeps it close to the left side with a 20px margin */
+  top: 30%; /* Centers the div vertically */
+  transform: translateY(-50%); /* Adjusts the vertical position to ensure true centering */
+  text-align: left; /* Ensures the text aligns to the left */
+  margin-left: 1rem;
+  gap: 10px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 2s ease-in forwards; /* Apply the fade-in animation */
+  animation-delay: 0.5s; /* Delay the fade-in */
+
+}
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: starts slightly lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends in the original position */
+  }
+}
+.headings h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.headings h2 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.headings p {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.blue-text {
+  color: rgb(43, 100, 244); /* Only this text will appear in blue */
+}
+.headings h1, .headings h2, .headings p {
+  line-height: 1; /* Adjust the value for desired spacing */
+}
+@media (max-width: 768px) {
+  .headings {
+    margin-left: 1rem; /* Reduce margin for smaller screens */
+    top: 25%; /* Centers the div vertically */
+    
+  }
+
+  .headings h1 {
+    font-size: 1.1rem; /* Smaller font for h1 */
+    font-weight: 400;
+  }
+
+  .headings h2 {
+    font-size: 1.5rem; /* Smaller font for h2 */
+  }
+  .headings p {
+    font-size: 1.1rem; /* Smaller font for paragraph */
+  }
+}
+.description {
+  display: inline-block; /* Align next to the previous paragraph */
+  left: 20px; /* Keeps it close to the left side with a 20px margin */
+  max-width: 500px; /* Limit the paragraph width */
+  font-size: 15px; /* Font size for better readability */
+  color: #faf4f4; /* Text color */
+  position: absolute; /* Enables precise positioning */
+  top:52%; /* Centers the div vertically */
+  animation: fadeIn 2.5s ease-in-out forwards; /* Fade-in effect with delay */
+  text-align: left; /* Ensures the text aligns to the left */
+  margin-left: 1rem;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  animation-delay: 0.5s; /* Delay the fade-in */
+  opacity: 0; /* Initial opacity set to 0 */
+  font-weight: 300;
+
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Slight downward start */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Smooth to original position */
+  }
+}
+@media (max-width: 768px) {
+  .description {
+    display: inline-block; /* Align next to the previous paragraph */
+    font-size: 15px; /* Smaller font size */
+    max-width: 500px; /* Limit the paragraph width */
+    left: 10px; /* Reduce left margin */
+    top:43%; /* Adjust vertical position */
+    margin-left: 1.5rem;
+    font-weight: 300;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }
